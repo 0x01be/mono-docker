@@ -8,6 +8,7 @@ RUN apk add --no-cache --virtual renode-build-dependencies \
     automake \
     libtool \
     python3 \
+    linux-headers \
     gettext-dev \
     curl-dev
 
