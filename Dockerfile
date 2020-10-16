@@ -12,6 +12,11 @@ RUN apk add --no-cache --virtual mono-build-dependencies \
     gettext-dev \
     curl-dev
 
+RUN apk add --no-cache --virtual mono-edge-build-dependencies \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    mono
 
 ENV MONO_REVISION mono-6.12.0.102
 RUN git clone --recursive --branch ${MONO_REVISION} https://github.com/mono/mono.git /mono
