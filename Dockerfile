@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache --virtual renode-build-dependencies \
+RUN apk add --no-cache --virtual mono-build-dependencies \
     git \
     build-base \
     cmake \
